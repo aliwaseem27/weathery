@@ -11,7 +11,11 @@ class WeatheryApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Weathery"),
+        ),
+      ),
     );
   }
 }
