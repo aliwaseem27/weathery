@@ -1,6 +1,8 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:weathery/routes/app_router.dart';
 
 @RoutePage()
 class OverviewPage extends StatelessWidget {
@@ -168,29 +170,34 @@ class OverviewPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Spacer(),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          "More Info",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        SizedBox(
-                          width: 6,
-                        ),
-                        Icon(
-                          Icons.arrow_forward_ios_sharp,
-                          color: Colors.white,
-                          size: 16,
-                        ),
-                      ],
+                  InkWell(
+                    onTap: (){
+                      context.router.push(DetailsRoute());
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      padding:
+                          const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            "More Info",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Icon(
+                            Icons.arrow_forward_ios_sharp,
+                            color: Colors.white,
+                            size: 16,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
