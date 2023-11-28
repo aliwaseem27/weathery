@@ -78,15 +78,13 @@ class OverviewPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
-                height: 66,
-              ),
+              Spacer(),
               Text(
                 "Wednesday, 02 Jul",
                 style: TextStyle(color: Colors.white, fontSize: 18),
               ),
               SizedBox(
-                height: 20,
+                height: 12,
               ),
               Stack(
                 clipBehavior: Clip.none,
@@ -106,7 +104,7 @@ class OverviewPage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 16,
+                height: 12,
               ),
               Text(
                 "Cloudy",
@@ -203,7 +201,7 @@ class OverviewPage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 24,
+                height: 16,
               ),
               Container(
                 child: Column(
