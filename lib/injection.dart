@@ -4,6 +4,7 @@ import 'package:weathery/injection.config.dart';
 
 final GetIt getIt = GetIt.instance;
 
+
 @injectableInit
 void configureDependencies(String env){
   getIt.init(environment: env);

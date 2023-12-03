@@ -3,16 +3,18 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
+import 'package:injectable/injectable.dart';
 import 'package:weathery/api/api_consumer.dart';
 import 'package:weathery/api/api_interceptors.dart';
 import 'package:weathery/api/endpoints.dart';
 import 'package:weathery/api/status_code.dart';
 import 'package:weathery/injection.dart';
 
+@Injectable(as: ApiConsumer)
 class DioConsumer implements ApiConsumer {
-  final Dio client;
+  final Dio client = Dio();
 
-  DioConsumer({required this.client}) {
+  DioConsumer() {
     client.httpClientAdapter = IOHttpClientAdapter(createHttpClient: () {
       final HttpClient httpClient =
       HttpClient(context: SecurityContext(withTrustedRoots: false));
